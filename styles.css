@@ -1,0 +1,54 @@
+header{
+    text-align: center;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.popup_form_container{
+    display: none;
+} 
+
+.active{
+    display: block;
+}
+
+.popup_form_container.active{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    border: 10px blue;
+    background-color: aquamarine;
+    padding: 10px;
+}
+
+
+.popup_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    overflow: scroll;
+}
+
+#books-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl); 
+}
